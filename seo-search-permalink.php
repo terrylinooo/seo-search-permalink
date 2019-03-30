@@ -17,7 +17,7 @@
  * Author URI:  https://terryl.in/
  * License:     GPL 3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain: ssp-plugin
+ * Text Domain: seo-search-permalink
  * Domain Path: /languages
  */
 
@@ -40,12 +40,15 @@ if ( ! defined( 'WPINC' ) ) {
  * Assign default setting values while activating SSP.
  */
 function ssp_admin_activation() {
-	add_option('ssp_permalink', '');
-	add_option('ssp_letter_type_option', '1');
-	add_option('ssp_filter_words', '');
-	add_option('ssp_filter_character_option', '1');
-	add_option('ssp_separate_symbol_option', '1');
+	add_option( 'ssp_permalink', '' );
+	add_option( 'ssp_letter_type_option', '1' );
+	add_option( 'ssp_filter_words', '' );
+	add_option( 'ssp_filter_character_option', '1' );
+	add_option( 'ssp_separate_symbol_option', '1' );
 }
+
+// Activating plugin.
+register_activation_hook( plugin_dir_path( __FILE__ ), 'ssp_admin_activation' );
 
 /**
  * Register the plugin setting page.
@@ -63,31 +66,36 @@ function ssp_admin_option_hook() {
 	}
 }
 
-// Activating plugin.
-register_activation_hook( plugin_dir_path( __FILE__ ), 'ssp_admin_activation' );
-
 // Load SSP settings.
 $ssp_settings = array(
-	'ssp_permalink'               => get_option('ssp_permalink'),
-	'ssp_filter_words'            => get_option('ssp_filter_words'),
-	'ssp_filter_character_option' => get_option('ssp_filter_character_option'),
-	'ssp_separate_symbol_option'  => get_option('ssp_separate_symbol_option'),
-	'ssp_letter_type_option'      => get_option('ssp_letter_type_option')
+	'ssp_permalink'               => get_option( 'ssp_permalink' ),
+	'ssp_filter_words'            => get_option( 'ssp_filter_words' ),
+	'ssp_filter_character_option' => get_option( 'ssp_filter_character_option' ),
+	'ssp_separate_symbol_option'  => get_option( 'ssp_separate_symbol_option' ),
+	'ssp_letter_type_option'      => get_option( 'ssp_letter_type_option' )
 );
 
-// Only load SSP setting page in admin panel.
-if ( is_admin() ) {
-	require_once plugin_dir_path( __FILE__ ) . 'inc/setting.php';
+function ssp_init() {
 
-	// Detect form submitting in setting page.
-	ssp_update_form_options();
+	// Only load SSP setting page in admin panel.
+	if ( is_admin() ) {
+		require_once plugin_dir_path( __FILE__ ) . 'inc/setting.php';
+
+		// Detect form submitting in setting page.
+		ssp_update_form_options();
+	}
+
+	// Load SSP functions.
+	require_once plugin_dir_path( __FILE__ ) . 'inc/functions.php';
+
+	// The magical things are happened here.
+	add_filter( 'search_rewrite_rules', 'ssp_change_search_permalink' );
+	add_action( 'admin_menu', 'ssp_admin_option_hook' );
+	add_action( 'template_redirect', 'ssp_search_redirect' );
+	add_action( 'pre_get_posts', 'ssp_keep_structure' );
 }
 
-// Load SSP functions.
-require_once plugin_dir_path( __FILE__ ) . 'inc/functions.php';
+add_action( 'init', 'ssp_init' );
 
-// The magic things are happened here.
-add_filter( 'search_rewrite_rules', 'ssp_change_search_permalink' );
-add_action( 'admin_menu', 'ssp_admin_option_hook' );
-add_action( 'template_redirect', 'ssp_search_redirect' );
-add_action( 'pre_get_posts', 'ssp_keep_structure' );
+
+

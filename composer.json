@@ -1,0 +1,17 @@
+{
+    "name": "terrylinooo/seo-search-permalink",
+    "description": "Change default search URLs to the SEO friendly URLs. It may improve your SERP to boost your site traffic. The default URL ?s=keyword will be changed to /search/keyword, and you could change the {search base} for your needs.",
+    "keywords": ["wordpress-plugin", "wordpress-seo", "wordpress-permalink"],
+    "homepage": "https://github.com/terrylinooo/mynote-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Terry Lin",
+            "email": "contact@terryl.in",
+            "homepage": "https://terryl.in"
+        }
+    ],
+    "require": {
+        "php": ">=5.1"
+    }
+}

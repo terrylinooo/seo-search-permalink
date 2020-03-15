@@ -118,30 +118,8 @@ function ssp_administrator_page() {
 /**
  * Display donation section.
  */
-function ssp_admin_donate(){
-?>
-	<div style="text-align: center;">
-		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-			<input name="cmd" value="_donations" type="hidden" />
-			<input name="business" value="donate@terryl.in" type="hidden" />
-			<input name="item_name" value="<?php esc_attr_e( __( 'Donation for SEO Search Permalink plugin', 'seo-search-permalink' ) ); ?>" type="hidden" />
-			<input name="item_number" value="seo-search-permalink" type="hidden" />
-			<select name="currency_code" value="USD">
-				<option value="USD" selected>USD</option>
-			</select>
-			<select name="amount" value="4.65">
-				<option value="4.65" selected>4.65 (<?php esc_attr_e( __( 'Caffe Mocha', 'seo-search-permalink' ) ); ?> x 1)</option>
-				<option value="46.5">46.5 (<?php esc_attr_e( __( 'Caffe Mocha', 'seo-search-permalink' ) ); ?> x 10)</option>
-				<option value="460">460 (<?php esc_attr_e( __( 'Caffe Mocha', 'seo-search-permalink' ) ); ?> x 100)</option>
-			</select>
-			<input name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest" type="hidden" />
-			<p>
-				<input src="https://www.paypal.com/en_US/GB/i/btn/btn_donateCC_LG.gif" name="submit" alt="<?php esc_attr_e( __( 'Donate with PayPal', 'seo-search-permalink' ) ); ?>" style="border: medium none; background: none repeat scroll 0% 0% transparent;" type="image" style="border: 0" />
-				<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" style="border:0;height:1px;width:1px" />
-			</p>
-		</form>
-	</div>
-	<?php
+function ssp_admin_donate() {
+	// Remove donation section.
 }
 
 /**

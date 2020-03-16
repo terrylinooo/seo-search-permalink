@@ -58,4 +58,4 @@ Presently there is no FAQ. You can leave a comment that describes your question 
 
 = 1.0.2 =
 
-* Fix an error when filitering bad words.
+* Fix an error when filtering bad words.

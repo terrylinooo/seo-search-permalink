@@ -5,13 +5,13 @@
  * @author Terry Lin
  * @link https://terryl.in/
  * @since 1.0.0
- * @version 1.0.0
+ * @version 1.0.2
  */
 
 /**
- * Message block 1
+ * Message block
  */
-function ssp_message_one() { ?>
+function ssp_message() { ?>
 	<div id="message" class="updated fade">
 		<p>
 			<?php $url_html = '<a href="' . get_bloginfo( 'url' ) . '/wp-admin/options-permalink.php">' . __( 'Permalink Setting', 'seo-search-permalink' ) . '</a>'; ?>
@@ -21,14 +21,6 @@ function ssp_message_one() { ?>
 	</div><?php
 }
 
-/**
- * Message block 2
- */
-function ssp_message_two() { ?>
-	<div id="message" class="updated fade">
-		<p><?php _e( 'You has updated the <strong>search permalink</strong> successfully', 'seo-search-permalink' ); ?></p>
-	</div><?php
-}
 
 /**
  * Update setting page.
@@ -42,7 +34,7 @@ function ssp_update_form_options() {
 		if ( isset( $_POST['submit_ssp_permalink'] ) && check_admin_referer( 'check_form_section_1', 'ssp_form_section_1' ) ) {
 			update_option('ssp_permalink', sanitize_text_field( $_POST['ssp_permalink'] ) );
 
-			add_action( 'admin_notices', 'ssp_message_one' );
+			add_action( 'admin_notices', 'ssp_message' );
 		}
 		
 		// Form section 2.
@@ -93,7 +85,7 @@ function ssp_update_form_options() {
 				update_option( 'ssp_filter_words', sanitize_text_field( $_POST['ssp_filter_words'] ) );
 			}
 
-			add_action( 'admin_notices', 'ssp_message_two' );
+			add_action( 'admin_notices', 'ssp_message' );
 		}
 
 		$ssp_settings = array(
@@ -132,8 +124,7 @@ function ssp_print_admin_page_header() {
 	?>
 
 	<style>
-	.ssp-flex { display: flex; }
-	.ssp-right { width: 320px; }
+	.ssp-flex { display: block; }
 	.ssp-table { margin: 14px; font-size: 13px; } 
 	.ssp-table tr { height: 28px; } 
 	.ssp-table td { line-height: 175%; }
@@ -329,23 +320,6 @@ function ssp_print_admin_page_main() {
 								</tr>
 							</table>
 						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="metabox-holder ssp-flex ssp-right">
-			<div class="meta-box-sortables ui-sortable">
-				<div id="ssp-donate" class="postbox">
-					<h3 class="hndle"><span><?php _e( 'Donation', 'seo-search-permalink' ); ?></span></h3>
-					<div class="inside">
-						<p><?php _e( 'If you think this plugin is useful to you, buy me a coffee.', 'seo-search-permalink' ); ?></p>
-						<div class="frame list">
-							<?php echo ssp_admin_donate(); ?>
-						</div>
-						<ol class="donate-note">
-							<li><?php printf( __( 'Top 5 donators, including their names or company name and URLs, will be listed on <a href="%s">my homepage</a>.', 'seo-search-permalink' ), 'https://terryl.in/'); ?></li>
-							<li><?php printf( __( 'All donators will be listed on  <a href="%s">Thank You</a> page.', 'seo-search-permalink' ), 'https://terryl.in/thank-you/'); ?></li>
-						</ol>
 					</div>
 				</div>
 			</div>

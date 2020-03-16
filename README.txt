@@ -2,8 +2,8 @@
 Contributors: terrylin
 Tags: seo, permalink, search permalink, search url
 Requires at least: 4.0
-Tested up to: 5.1.1
-Stable tag: 1.0.1
+Tested up to: 5.3.2
+Stable tag: 1.0.2
 Requires PHP: 5.3.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl.html
@@ -51,3 +51,11 @@ Presently there is no FAQ. You can leave a comment that describes your question 
 = 1.0 =
 
 * First release.
+
+= 1.0.1 =
+
+* Remove donation section.
+
+= 1.0.2 =
+
+* Fix an error when filitering bad words.

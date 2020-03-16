@@ -5,7 +5,7 @@
  * @author Terry Lin
  * @link https://terryl.in/
  * @since 1.0.0
- * @version 1.0.0
+ * @version 1.0.2
  */
 
 /**
@@ -98,10 +98,12 @@ function ssp_filter_spec_chars($query_strings) {
 	global $ssp_settings;
 	
 	if ( $ssp_settings['ssp_filter_character_option'] == 2 ) {
+		$query_strings = rawurldecode($query_strings);
 		$ssp_unwanted_characters = array( '"', "'", '[', ']', '~', '=', ',', '*', '&', '^', '$', '#', '@', '!', '<', '>', ';', '.', '|', '/', '+', '-', '_' );
-	}
-	if ( is_array( $ssp_unwanted_characters ) ) {
-		$query_strings = trim( str_replace( $ssp_unwanted_characters, ' ', $query_strings ) );
+	
+		if ( is_array( $ssp_unwanted_characters ) ) {
+			$query_strings = trim( str_replace( $ssp_unwanted_characters, ' ', $query_strings ) );
+		}
 	}
 
 	return $query_strings;
@@ -114,6 +116,8 @@ function ssp_filter_spec_chars($query_strings) {
  * @return string
  */
 function ssp_filter_bad_words( $query_strings ) {
+	global $ssp_settings;
+
 	if ( '' !== $ssp_settings['ssp_filter_words'] ) {
 		$ssp_bad_words = explode( ',', $ssp_settings['ssp_filter_words'] );
 		$query_strings = str_replace( $ssp_bad_words, ' ', $query_strings );

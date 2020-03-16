@@ -3,7 +3,7 @@
  * Plugin Name: SEO Search Permalink
  * Plugin URI:  https://github.com/terrylinooo/seo-search-permalink
  * Description: Change default search URLs to the SEO friendly URLs. It may improve your SERP to boost your site traffic. The default URL ?s=keyword will be changed to /search/keyword, and you could change the {search base} for your needs.
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      Terry Lin
  * Author URI:  https://terryl.in/
  * License:     GPL 3.0
@@ -89,6 +89,3 @@ function ssp_init() {
 }
 
 add_action( 'init', 'ssp_init' );
-
-
-

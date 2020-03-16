@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SEO Search Permalink\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 05:44+0000\n"
+"POT-Creation-Date: 2020-03-16 01:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,30 +15,108 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.1.1"
 
-#: inc/setting.php:297
+#: inc/setting.php:17
+msgid "Permalink Setting"
+msgstr ""
+
+#: inc/setting.php:18
+msgid "You has updated the <strong>search permalink</strong> successfully"
+msgstr ""
+
+#: inc/setting.php:19
+#, php-format
 msgid ""
-"<b>Note</b>: It is not recommended to use \"backward slash\" if you need "
-"pagination in search result page. It will cause the pagination not working."
+"You have to go %s page and click on \"Save Changes\" button to take effect."
 msgstr ""
 
-#: inc/setting.php:320
-msgid "Accept all characters."
+#. Name of the plugin
+#: inc/setting.php:145
+msgid "SEO Search Permalink"
 msgstr ""
 
-#: inc/setting.php:218
+#: inc/setting.php:176
+msgid "Permalink Settings"
+msgstr ""
+
+#: inc/setting.php:183
+msgid "Search Base"
+msgstr ""
+
+#: inc/setting.php:187
 #, php-format
 msgid ""
 "After you have activated this plugin, the search permalink will be changed "
 "from %1$s to %2$s."
 msgstr ""
 
-#: inc/setting.php:369
-#, php-format
-msgid "All donators will be listed on  <a href=\"%s\">Thank You</a> page."
+#: inc/setting.php:188
+msgid ""
+"If you want yo change the search base, please fill in the field with the new "
+"one. Keeping this field blank will apply the default."
 msgstr ""
 
-#: inc/setting.php:335
+#: inc/setting.php:192 inc/setting.php:317
+msgid "Save Changes"
+msgstr ""
+
+#: inc/setting.php:204
+msgid "General Settings"
+msgstr ""
+
+#: inc/setting.php:211
+msgid "Letter type"
+msgstr ""
+
+#: inc/setting.php:214
+msgid "No change (default)"
+msgstr ""
+
+#: inc/setting.php:215
+msgid "Lowercase letters"
+msgstr ""
+
+#: inc/setting.php:223
+msgid "Separation symbol"
+msgstr ""
+
+#: inc/setting.php:232 inc/setting.php:240 inc/setting.php:248
+#: inc/setting.php:256 inc/setting.php:293
+msgid "e.g."
+msgstr ""
+
+#: inc/setting.php:266
+msgid ""
+"<b>Note</b>: It is not recommended to use \"backward slash\" if you need "
+"pagination in search result page. It will cause the pagination not working."
+msgstr ""
+
+#: inc/setting.php:275
+msgid "Unwanted special character filtering"
+msgstr ""
+
+#: inc/setting.php:289
+msgid "Accept all characters."
+msgstr ""
+
+#: inc/setting.php:292
+msgid "Remove all special characters."
+msgstr ""
+
+#: inc/setting.php:304
 msgid "Bad words filtering"
+msgstr ""
+
+#: inc/setting.php:307
+msgid ""
+"Enter the words you want to remove from search, separate them with a comma. "
+"( e.g.: keyword_1,keyword_2,keyword_3 )"
+msgstr ""
+
+#: inc/setting.php:308
+msgid ""
+"For example, an user submit a search term \"Taiwan is a keyword_1 beautiful "
+"country\" that includes \"keyword_1\", after filtering, the search term will "
+"be \"Taiwan is a beautiful country\"."
 msgstr ""
 
 #. Description of the plugin
@@ -48,112 +126,14 @@ msgid ""
 "to /search/keyword, and you could change the {search base} for your needs."
 msgstr ""
 
-#: inc/setting.php:361
-msgid "Donation"
-msgstr ""
-
-#: inc/setting.php:263 inc/setting.php:271 inc/setting.php:279
-#: inc/setting.php:287 inc/setting.php:324
-msgid "e.g."
-msgstr ""
-
-#: inc/setting.php:338
-msgid ""
-"Enter the words you want to remove from search, separate them with a comma. "
-"( e.g.: keyword_1,keyword_2,keyword_3 )"
-msgstr ""
-
-#: inc/setting.php:339
-msgid ""
-"For example, an user submit a search term \"Taiwan is a keyword_1 beautiful "
-"country\" that includes \"keyword_1\", after filtering, the search term will "
-"be \"Taiwan is a beautiful country\"."
-msgstr ""
-
-#: inc/setting.php:235
-msgid "General Settings"
-msgstr ""
-
 #. URI of the plugin
 msgid "https://github.com/terrylinooo/seo-search-permalink"
-msgstr ""
-
-#. Author URI of the plugin
-msgid "https://terryl.in/"
-msgstr ""
-
-#: inc/setting.php:363
-msgid "If you think this plugin is useful to you, buy me a coffee."
-msgstr ""
-
-#: inc/setting.php:219
-msgid ""
-"If you want yo change the search base, please fill in the field with the new "
-"one. Keeping this field blank will apply the default."
-msgstr ""
-
-#: inc/setting.php:242
-msgid "Letter type"
-msgstr ""
-
-#: inc/setting.php:246
-msgid "Lowercase letters"
-msgstr ""
-
-#: inc/setting.php:245
-msgid "No change (default)"
-msgstr ""
-
-#: inc/setting.php:17
-msgid "Permalink Setting"
-msgstr ""
-
-#: inc/setting.php:207
-msgid "Permalink Settings"
-msgstr ""
-
-#: inc/setting.php:323
-msgid "Remove all special characters."
-msgstr ""
-
-#: inc/setting.php:223 inc/setting.php:348
-msgid "Save Changes"
-msgstr ""
-
-#: inc/setting.php:214
-msgid "Search Base"
-msgstr ""
-
-#. Name of the plugin
-#: inc/setting.php:176
-msgid "SEO Search Permalink"
-msgstr ""
-
-#: inc/setting.php:254
-msgid "Separation symbol"
 msgstr ""
 
 #. Author of the plugin
 msgid "Terry Lin"
 msgstr ""
 
-#: inc/setting.php:368
-#, php-format
-msgid ""
-"Top 5 donators, including their names or company name and URLs, will be "
-"listed on <a href=\"%s\">my homepage</a>."
-msgstr ""
-
-#: inc/setting.php:306
-msgid "Unwanted special character filtering"
-msgstr ""
-
-#: inc/setting.php:18 inc/setting.php:29
-msgid "You has updated the <strong>search permalink</strong> successfully"
-msgstr ""
-
-#: inc/setting.php:19
-#, php-format
-msgid ""
-"You have to go %s page and click on \"Save Changes\" button to take effect."
+#. Author URI of the plugin
+msgid "https://terryl.in/"
 msgstr ""

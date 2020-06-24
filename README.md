@@ -1,8 +1,8 @@
 # SEO Search Permalink
 
-Change default search URLs to the SEO friendly URLs. It may improve your SERP to boost your site traffic. The default URL ?s=keyword will be changed to /search/keyword, and you could change the {search base} for your need.
+Change default search URLs to the SEO friendly URLs. It may improve your SERP to boost your site traffic. The default URL `?s=keyword` will be changed to `/search/keyword`, and you could change the `{search base}` for your need.
 
-SEO Search Permalink plugin has four type of permalink structure, filters the bad words and special characters out from the search terms. It makes your site's search URLs really clean.
+SEO Search Permalink plugin has four type of permalink structure, filtering the bad words and special characters out from the search terms. It makes your site's search URLs really clean.
 
 ## Download
 
@@ -33,3 +33,11 @@ Also check out my other WordPress plugin works such as [Markdown edior plugin](h
 = 1.0 =
 
 * First release.
+
+= 1.0.1 =
+
+* Remove donation section.
+
+= 1.0.2 =
+
+* Fix an error when filtering bad words.

@@ -18,7 +18,8 @@ function ssp_message() { ?>
 			<?php _e( 'You has updated the <strong>search permalink</strong> successfully', 'seo-search-permalink' ); ?><br />
 			<?php printf( __( 'You have to go %s page and click on "Save Changes" button to take effect.', 'seo-search-permalink' ), $url_html ); ?>
 		</p>
-	</div><?php
+	</div>
+	<?php
 }
 
 
@@ -32,11 +33,11 @@ function ssp_update_form_options() {
 
 		// Form section 1.
 		if ( isset( $_POST['submit_ssp_permalink'] ) && check_admin_referer( 'check_form_section_1', 'ssp_form_section_1' ) ) {
-			update_option('ssp_permalink', sanitize_text_field( $_POST['ssp_permalink'] ) );
+			update_option( 'ssp_permalink', sanitize_text_field( $_POST['ssp_permalink'] ) );
 
 			add_action( 'admin_notices', 'ssp_message' );
 		}
-		
+
 		// Form section 2.
 		if ( isset( $_POST['submit_general_settings'] ) && check_admin_referer( 'check_form_section_2', 'ssp_form_section_2' ) ) {
 
@@ -67,7 +68,7 @@ function ssp_update_form_options() {
 						break;
 				}
 			}
-			
+
 			if ( ! empty( $_POST['ssp_letter_type_option'] ) ) {
 				$ssp_letter_type_option = $_POST['ssp_letter_type_option'];
 
@@ -93,7 +94,7 @@ function ssp_update_form_options() {
 			'ssp_filter_words'            => get_option( 'ssp_filter_words' ),
 			'ssp_filter_character_option' => get_option( 'ssp_filter_character_option' ),
 			'ssp_separate_symbol_option'  => get_option( 'ssp_separate_symbol_option' ),
-			'ssp_letter_type_option'      => get_option( 'ssp_letter_type_option' )
+			'ssp_letter_type_option'      => get_option( 'ssp_letter_type_option' ),
 		);
 	}
 }
@@ -118,9 +119,6 @@ function ssp_admin_donate() {
  * Setting page: header.
  */
 function ssp_print_admin_page_header() {
-	
-	$baseurl = 'options-general.php?page=' . basename( plugin_basename( __FILE__ ) );
-
 	?>
 
 	<style>
@@ -143,7 +141,7 @@ function ssp_print_admin_page_header() {
 
 	<div class="wrap">
 		<h2><?php echo __( 'SEO Search Permalink', 'seo-search-permalink' ); ?></h2>
-	<?php 
+	<?php
 }
 
 /**
@@ -159,13 +157,12 @@ function ssp_print_admin_page_footer() {
 /**
  * Print setting sections.
  */
-function ssp_print_admin_page_main() { 
+function ssp_print_admin_page_main() {
 	global $ssp_settings;
 
 	$string_from = '<code class="ssp-code-inline"><b>/?s=<span style="color:red">query</span></b></code>';
 	$string_to   = '<code class="ssp-code-inline"><b>/search/<span style="color:red">query</span></b></code>';
-
-?>	
+?>
 	<div class="postbox-container ssp-flex" style="width: 100%;">
 		<div class="metabox-holder ssp-left">
 			<div class="meta-box-sortables ui-sortable">    		
@@ -184,10 +181,10 @@ function ssp_print_admin_page_main() {
 									</td>
 									<td width="75%">
 										<p>
-											<?php printf( __( 'After you have activated this plugin, the search permalink will be changed from %1$s to %2$s.', 'seo-search-permalink' ), $string_from, $string_to ); ?><br />
-											<?php _e( 'If you want yo change the search base, please fill in the field with the new one. Keeping this field blank will apply the default.', 'seo-search-permalink' ); ?>
+											<?php printf( __( 'After activating this plugin, the search permalink will change from %1$s to %2$s.', 'seo-search-permalink' ), $string_from, $string_to ); ?><br />
+											<?php _e( 'If you wish to modify the search base, please enter the desired term in the provided field. Leaving this field empty will maintain the default setting.', 'seo-search-permalink' ); ?>
 										</p>
-										<input type="text" value="<?php if ( $ssp_settings['ssp_permalink'] != '' ) { echo $ssp_settings['ssp_permalink']; }; ?>" size="20" name="ssp_permalink" />
+										<input type="text" value="<?php if ( $ssp_settings['ssp_permalink'] !== '' ) { echo $ssp_settings['ssp_permalink']; }; ?>" size="20" name="ssp_permalink" />
 										<span class="submit" style="margin-top: 14px;">
 											<input class="button-primary" type = "submit" name="submit_ssp_permalink" value="<?php _e( 'Save Changes', 'seo-search-permalink' ); ?>" />
 										</span>
@@ -220,7 +217,7 @@ function ssp_print_admin_page_main() {
 							<table class="ssp-table">
 								<tr>
 									<td width="25%" class="ssp-label">
-										<?php _e( 'Separation symbol', 'seo-search-permalink' ); ?>
+										<?php _e( 'Separator Symbol', 'seo-search-permalink' ); ?>
 									</td>
 									<td width="75%">
 										<table class="ssp-table2" cellspacing="1" cellpadding="5" width="100%">
@@ -263,7 +260,7 @@ function ssp_print_admin_page_main() {
 									<td></td>
 									<td colspan="3">
 										<p>
-											<?php _e( '<b>Note</b>: It is not recommended to use "backward slash" if you need pagination in search result page. It will cause the pagination not working.', 'seo-search-permalink' ); ?>
+											<?php _e( '<b>Note</b>: It is not recommended to use a "backslash" if you require pagination on the search results page, as this may cause the pagination to malfunction.', 'seo-search-permalink' ); ?>
 										</p>
 									</td>
 								</tr>
@@ -272,7 +269,7 @@ function ssp_print_admin_page_main() {
 							<table class="ssp-table">
 								<tr>
 									<td width="25%" class="ssp-label">
-										<?php _e( 'Unwanted special character filtering', 'seo-search-permalink' ); ?>
+										<?php _e( 'Filtering Unwanted Special Characters', 'seo-search-permalink' ); ?>
 									</td>
 									<td width="75%">
 										<table class="ssp-table2" cellspacing="1" cellpadding="5">
@@ -301,11 +298,11 @@ function ssp_print_admin_page_main() {
 							<table class="ssp-table">
 								<tr>
 									<td width="25%" class="ssp-label">
-										<?php _e( 'Bad words filtering', 'seo-search-permalink' ); ?>
+										<?php _e( 'Profanity Filtering', 'seo-search-permalink' ); ?>
 									</td>
 									<td width="75%">
-										<p><?php _e( 'Enter the words you want to remove from search, separate them with a comma. ( e.g.: keyword_1,keyword_2,keyword_3 )', 'seo-search-permalink' ); ?></p>
-										<p><?php _e( 'For example, an user submit a search term "Taiwan is a keyword_1 beautiful country" that includes "keyword_1", after filtering, the search term will be "Taiwan is a beautiful country".', 'seo-search-permalink' ); ?></p>
+										<p><?php _e( 'Enter the words you want to exclude from the search, separating them with commas (e.g., keyword_1, keyword_2, keyword_3).', 'seo-search-permalink' ); ?></p>
+										<p><?php _e( 'For example, if a user submits the search term "Taiwan is a keyword_1 beautiful country", which includes "keyword_1," the filtered search term will be "Taiwan is a beautiful country" after removal.', 'seo-search-permalink' ); ?></p>
 										<textarea name="ssp_filter_words" cols="75" rows="3"><?php echo $ssp_settings['ssp_filter_words']; ?></textarea>
 									</td>
 								</tr>
@@ -326,6 +323,6 @@ function ssp_print_admin_page_main() {
 		</div>
 	</div>
 	<div style="clear:both"></div>
-
 <?php
+
 }

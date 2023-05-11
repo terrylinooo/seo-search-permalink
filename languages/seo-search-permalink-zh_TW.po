@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: SEO Search Permalink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-16 01:50+0000\n"
-"PO-Revision-Date: 2020-03-16 01:50+0000\n"
+"PO-Revision-Date: 2023-05-11 00:02+0000\n"
 "Last-Translator: Terry Lin <contact@terryl.in>\n"
 "Language-Team: Chinese (Taiwan)\n"
 "Language: zh_TW\n"
@@ -14,9 +14,132 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.3.1; wp-5.3.2"
 
+#: inc/setting.php:263
+msgid ""
+"<b>Note</b>: It is not recommended to use a \"backslash\" if you require "
+"pagination on the search results page, as this may cause the pagination to "
+"malfunction."
+msgstr ""
+
+#: inc/setting.php:286
+msgid "Accept all characters."
+msgstr "接受所有字元。"
+
+#: inc/setting.php:184
+#, fuzzy, php-format
+#| msgid ""
+#| "After you have activated this plugin, the search permalink will be "
+#| "changed from %1$s to %2$s."
+msgid ""
+"After activating this plugin, the search permalink will change from %1$s to "
+"%2$s."
+msgstr "在您啟用這個外掛之後，搜尋的永遠網址將會從 %1$s 變為 %2$s。"
+
+#. Description of the plugin
+msgid ""
+"Change default search URLs to the SEO friendly URLs. It may improve your "
+"SERP to boost your site traffic. The default URL ?s=keyword will be changed "
+"to /search/keyword, and you could change the {search base} for your needs."
+msgstr ""
+"把預設的搜尋網址變為搜尋引擎最加化友善網址。或許對於增加您的網站流量有幫助。預設的網址 ?s=keyword 將會變成 "
+"/search/keyword，您可以更改應需求更改 {search base} "
+
+#: inc/setting.php:229 inc/setting.php:237 inc/setting.php:245
+#: inc/setting.php:253 inc/setting.php:290
+msgid "e.g."
+msgstr "例子"
+
+#: inc/setting.php:304
+#, fuzzy
+#| msgid ""
+#| "Enter the words you want to remove from search, separate them with a "
+#| "comma. ( e.g.: keyword_1,keyword_2,keyword_3 )"
+msgid ""
+"Enter the words you want to exclude from the search, separating them with "
+"commas (e.g., keyword_1, keyword_2, keyword_3)."
+msgstr "輸入您想要從搜尋中移除的字詞。（例：:keyword_1,keyword_2,keyword_3）"
+
+#: inc/setting.php:272
+msgid "Filtering Unwanted Special Characters"
+msgstr "移除無用的特殊字元"
+
+#: inc/setting.php:305
+msgid ""
+"For example, if a user submits the search term \"Taiwan is a keyword_1 "
+"beautiful country\", which includes \"keyword_1,\" the filtered search term "
+"will be \"Taiwan is a beautiful country\" after removal."
+msgstr ""
+"舉例，如果使用者輸入搜尋字詞“Taiwan is a keyword_1 beautiful "
+"country”，包含了“keyword_1”，過濾後的字詞會是“Taiwan is a beautiful country”。"
+
+#: inc/setting.php:201
+msgid "General Settings"
+msgstr "一般設定"
+
+#. URI of the plugin
+msgid "https://github.com/terrylinooo/seo-search-permalink"
+msgstr "https://github.com/terrylinooo/seo-search-permalink"
+
+#. Author URI of the plugin
+msgid "https://terryl.in/"
+msgstr "https://terryl.in/"
+
+#: inc/setting.php:185
+msgid ""
+"If you wish to modify the search base, please enter the desired term in the "
+"provided field. Leaving this field empty will maintain the default setting."
+msgstr "如果您希望修改搜尋基礎路徑，請在提供的欄位中輸入所需的條件。留空此欄位將保持預設值。"
+
+#: inc/setting.php:208
+msgid "Letter type"
+msgstr "字母類別"
+
+#: inc/setting.php:212
+msgid "Lowercase letters"
+msgstr "小寫字母"
+
+#: inc/setting.php:211
+msgid "No change (default)"
+msgstr "不改變（預設）"
+
 #: inc/setting.php:17
 msgid "Permalink Setting"
 msgstr "永久網址設定"
+
+#: inc/setting.php:173
+msgid "Permalink Settings"
+msgstr "永久網址設定"
+
+#: inc/setting.php:301
+msgid "Profanity Filtering"
+msgstr "粗俗用語過濾"
+
+#: inc/setting.php:289
+msgid "Remove all special characters."
+msgstr "移除特殊字元。"
+
+#: inc/setting.php:189 inc/setting.php:314
+msgid "Save Changes"
+msgstr "儲存變更"
+
+#: inc/setting.php:180
+msgid "Search Base"
+msgstr "搜尋的基本網址"
+
+#. Name of the plugin
+#: inc/setting.php:143
+msgid "SEO Search Permalink"
+msgstr "SEO 搜尋永久網址"
+
+#: inc/setting.php:220
+#, fuzzy
+#| msgid "Separation symbol"
+msgid "Separator Symbol"
+msgstr "分隔符"
+
+#. Author of the plugin
+msgid "Terry Lin"
+msgstr "Terry Lin"
 
 #: inc/setting.php:18
 msgid "You has updated the <strong>search permalink</strong> successfully"
@@ -27,116 +150,3 @@ msgstr "您已經成功變更了搜尋的永久網址"
 msgid ""
 "You have to go %s page and click on \"Save Changes\" button to take effect."
 msgstr "您必須前往 %s 頁頁，然後按下 \"儲存變更\" 按紐讓設定生效。"
-
-#. Name of the plugin
-#: inc/setting.php:145
-msgid "SEO Search Permalink"
-msgstr "SEO 搜尋永久網址"
-
-#: inc/setting.php:176
-msgid "Permalink Settings"
-msgstr "永久網址設定"
-
-#: inc/setting.php:183
-msgid "Search Base"
-msgstr "搜尋的基本網址"
-
-#: inc/setting.php:187
-#, php-format
-msgid ""
-"After you have activated this plugin, the search permalink will be changed "
-"from %1$s to %2$s."
-msgstr "在您啟用這個外掛之後，搜尋的永遠網址將會從 %1$s 變為 %2$s。"
-
-#: inc/setting.php:188
-msgid ""
-"If you want yo change the search base, please fill in the field with the new "
-"one. Keeping this field blank will apply the default."
-msgstr "如果您要改變搜尋的基本網址，請在欄位中填入新的基本網址，保持留空則採用預設值。"
-
-#: inc/setting.php:192 inc/setting.php:317
-msgid "Save Changes"
-msgstr "儲存變更"
-
-#: inc/setting.php:204
-msgid "General Settings"
-msgstr "一般設定"
-
-#: inc/setting.php:211
-msgid "Letter type"
-msgstr "字母類別"
-
-#: inc/setting.php:214
-msgid "No change (default)"
-msgstr "不改變（預設）"
-
-#: inc/setting.php:215
-msgid "Lowercase letters"
-msgstr "小寫字母"
-
-#: inc/setting.php:223
-msgid "Separation symbol"
-msgstr "分隔符"
-
-#: inc/setting.php:232 inc/setting.php:240 inc/setting.php:248
-#: inc/setting.php:256 inc/setting.php:293
-msgid "e.g."
-msgstr "例子"
-
-#: inc/setting.php:266
-msgid ""
-"<b>Note</b>: It is not recommended to use \"backward slash\" if you need "
-"pagination in search result page. It will cause the pagination not working."
-msgstr "<b>提示</b>: 如果您需要分頁，則不建議用 \"反斜線\"，因為會導至分頁失效。"
-
-#: inc/setting.php:275
-msgid "Unwanted special character filtering"
-msgstr "過濾不需要的字元"
-
-#: inc/setting.php:289
-msgid "Accept all characters."
-msgstr "接受所有字元。"
-
-#: inc/setting.php:292
-msgid "Remove all special characters."
-msgstr "移除特殊字元。"
-
-#: inc/setting.php:304
-msgid "Bad words filtering"
-msgstr "過濾不雅字詞"
-
-#: inc/setting.php:307
-msgid ""
-"Enter the words you want to remove from search, separate them with a comma. "
-"( e.g.: keyword_1,keyword_2,keyword_3 )"
-msgstr "輸入您想要從搜尋中移除的字詞。（例：:keyword_1,keyword_2,keyword_3）"
-
-#: inc/setting.php:308
-msgid ""
-"For example, an user submit a search term \"Taiwan is a keyword_1 beautiful "
-"country\" that includes \"keyword_1\", after filtering, the search term will "
-"be \"Taiwan is a beautiful country\"."
-msgstr ""
-"舉例，使用者送出一個搜尋詞組 \"台灣是一個 keyword_1 美麗的國家\" 包含了 \"keyword_1\"，在過濾之後，搜尋詞組會變為 "
-"\"台灣是一個美麗的國家\""
-
-#. Description of the plugin
-msgid ""
-"Change default search URLs to the SEO friendly URLs. It may improve your "
-"SERP to boost your site traffic. The default URL ?s=keyword will be changed "
-"to /search/keyword, and you could change the {search base} for your needs."
-msgstr ""
-"把預設的搜尋網址變為搜尋引擎最加化友善網址。或許對於增加您的網站流量多少幫助。預設的網址 ?s=keyword 將會變成 "
-"/search/keyword，您可以更改應需求更改 {search base} "
-
-#. URI of the plugin
-msgid "https://github.com/terrylinooo/seo-search-permalink"
-msgstr "https://github.com/terrylinooo/seo-search-permalink"
-
-#. Author of the plugin
-msgid "Terry Lin"
-msgstr "Terry Lin"
-
-#. Author URI of the plugin
-msgid "https://terryl.in/"
-msgstr "https://terryl.in/"

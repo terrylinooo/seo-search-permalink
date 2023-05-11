@@ -2,25 +2,27 @@
 Contributors: terrylin
 Tags: seo, permalink, search permalink, search url
 Requires at least: 4.0
-Tested up to: 5.3.2
-Stable tag: 1.0.2
+Tested up to: 6.2.0
+Stable tag: 1.0.3
 Requires PHP: 5.3.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl.html
 
 == Description ==
 
-Change default search URLs to the SEO friendly URLs. It may improve your SERP to boost your site traffic. The default URL ?s=keyword will be changed to /search/keyword, and you could change the {search base} for your need.
+Change default search URLs to SEO-friendly URLs, which may enhance your SERP rankings and increase your site traffic. The default URL ?s=keyword will be changed to /search/keyword, and you can adjust the {search base} as needed.
 
-SEO Search Permalink plugin has four type of permalink structure, filters the bad words and special characters out from the search terms. It makes your site's search URLs really clean.
+SEO Search Permalink plugin provides four types of permalink structures, filtering out bad words and special characters from search terms. This results in truly clean search URLs for your site.
 
-SEO Search Permalink is an open source project, any question or suggestion please visit:
+SEO Search Permalink is an open-source project. For any questions or suggestions, please visit:
 [https://github.com/terrylinooo/seo-search-permalink](https://github.com/terrylinooo/seo-search-permalink).
+
+Also, check out my [Markdown edior plugin](https://wordpress.org/plugins/wp-githuber-md/) if you need a Markdown editor.
 
 == Installation ==
 
-1. Upload the `seo-search-permalink` folder to your `/wp-content/plugins/` directory
-2. Activate the "SEO Search Permalink" plugin in your WordPress administration interface.
+1. Upload the seo-search-permalink folder to your `/wp-content/plugins/ directory`.
+2. Activate the "SEO Search Permalink" plugin through your WordPress administration interface.
 3. Done!
 
 == Copyright ==
@@ -44,7 +46,7 @@ GNU General Public License for more details.
 
 == Frequently Asked Questions ==
 
-Presently there is no FAQ. You can leave a comment that describes your question on my plugin's page. I will answer you as soon as possible.
+Currently, there is no FAQ section. You can leave a comment describing your question on my plugin's page, and I will respond as soon as possible.
 
 == Changelog ==
 
@@ -58,4 +60,9 @@ Presently there is no FAQ. You can leave a comment that describes your question 
 
 = 1.0.2 =
 
-* Fix an error when filtering bad words.
+* Fixed an error that occurred while filtering bad words.
+
+= 1.0.3 =
+
+* Added and fixed translation terms. Many thanks to **[CoLocal](https://colocal.com/)** for helping to revise the translation files.
+* Tested with PHP 8.2 and WordPress 6.2.

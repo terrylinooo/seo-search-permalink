@@ -3,7 +3,7 @@
  * Plugin Name: SEO Search Permalink
  * Plugin URI:  https://github.com/terrylinooo/seo-search-permalink
  * Description: Change default search URLs to the SEO friendly URLs. It may improve your SERP to boost your site traffic. The default URL ?s=keyword will be changed to /search/keyword, and you could change the {search base} for your needs.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      Terry Lin
  * Author URI:  https://terryl.in/
  * License:     GPL 3.0
@@ -15,7 +15,7 @@
 /**
  * Any issues, or would like to request a feature, please visit.
  * https://github.com/terrylinooo/seo-search-permalink/issues
- * 
+ *
  * Welcome to contribute your code here:
  * https://github.com/terrylinooo/seo-search-permalink
  *
@@ -45,8 +45,8 @@ register_activation_hook( plugin_dir_path( __FILE__ ), 'ssp_admin_activation' );
  * Register the plugin setting page.
  */
 function ssp_admin_option_hook() {
-	
-    if ( function_exists( 'add_options_page' ) ) {
+
+	if ( function_exists( 'add_options_page' ) ) {
 		add_options_page(
 			__( 'SEO Search Permalink', 'ssp-plugin' ),
 			__( 'SEO Search Permalink', 'ssp-plugin' ),
@@ -63,12 +63,17 @@ $ssp_settings = array(
 	'ssp_filter_words'            => get_option( 'ssp_filter_words' ),
 	'ssp_filter_character_option' => get_option( 'ssp_filter_character_option' ),
 	'ssp_separate_symbol_option'  => get_option( 'ssp_separate_symbol_option' ),
-	'ssp_letter_type_option'      => get_option( 'ssp_letter_type_option' )
+	'ssp_letter_type_option'      => get_option( 'ssp_letter_type_option' ),
 );
 
+/**
+ * Update SSP settings.
+ *
+ * @return void
+ */
 function ssp_init() {
 
-	load_plugin_textdomain( 'seo-search-permalink', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
+	load_plugin_textdomain( 'seo-search-permalink', false, basename( dirname( __FILE__ ) ) . '/languages' );
 
 	// Only load SSP setting page in admin panel.
 	if ( is_admin() ) {

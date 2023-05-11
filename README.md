@@ -1,8 +1,8 @@
 # SEO Search Permalink
 
-Change default search URLs to the SEO friendly URLs. It may improve your SERP to boost your site traffic. The default URL `?s=keyword` will be changed to `/search/keyword`, and you could change the `{search base}` for your need.
+Change default search URLs to SEO-friendly URLs, which may enhance your SERP rankings and increase your site traffic. The default URL ?s=keyword will be changed to /search/keyword, and you can adjust the {search base} as needed.
 
-SEO Search Permalink plugin has four type of permalink structure, filtering the bad words and special characters out from the search terms. It makes your site's search URLs really clean.
+SEO Search Permalink plugin provides four types of permalink structures, filtering out bad words and special characters from search terms. This results in truly clean search URLs for your site.
 
 ## Download
 
@@ -14,9 +14,9 @@ SEO Search Permalink plugin has four type of permalink structure, filtering the 
 
 ### Installation
 
-1. Upload the `seo-search-permalink` folder to your `/wp-content/plugins/` directory, , or install the plugin through the WordPress plugins screen directly.
-2. Activate the "SEO Search Permalink" plugin in your WordPress administration interface.
-3. Go to the `SEO Search Permalink` menu in Settings and set your permalink options.
+1. Upload the `seo-search-permalink` folder to your `/wp-content/plugins/` directory, or install the plugin directly through the WordPress plugins screen.
+2. Activate the "SEO Search Permalink" plugin via your WordPress administration interface.
+3. Navigate to the `SEO Search Permalink` menu in Settings and configure your permalink options.
 
 ### License
 
@@ -26,7 +26,7 @@ GPLv3 or later
 
 **[Terry Lin](https://terryl.in/)**
 
-Also check out my other WordPress plugin works such as [Markdown edior plugin](https://wordpress.org/plugins/wp-githuber-md/), there an online [Markdown editor](https://markdown-editor.github.io/) is public to anyone. 
+Also, check out my [Markdown edior plugin](https://wordpress.org/plugins/wp-githuber-md/) if you need a Markdown editor.
 
 ### Changelog
 
@@ -34,10 +34,11 @@ Also check out my other WordPress plugin works such as [Markdown edior plugin](h
 
 * First release.
 
-= 1.0.1 =
-
-* Remove donation section.
-
 = 1.0.2 =
 
-* Fix an error when filtering bad words.
+* Fixed an error that occurred while filtering bad words.
+
+= 1.3 =
+
+* Added and fixed translation terms. Many thanks to **[CoLocal](https://colocal.com/)** for helping to revise the translation files.
+* Tested with PHP 8.2 and WordPress 6.2.
